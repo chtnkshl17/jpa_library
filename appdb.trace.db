@@ -23,3 +23,70 @@ Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection wa
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 16 more
+2026-01-24 13:53:07.401254-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]order (id uuid not null, order_date timestamp(6) with time zone, customer_id uuid, primary key (id))"; expected "identifier"; SQL statement:
+create table order (id uuid not null, order_date timestamp(6) with time zone, customer_id uuid, primary key (id)) [42001-240]
+2026-01-24 13:53:07.426457-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists [*]order add constraint FKb8tboo4d95mh8gavvovwbb7vg foreign key (customer_id) references customer"; expected "identifier"; SQL statement:
+alter table if exists order add constraint FKb8tboo4d95mh8gavvovwbb7vg foreign key (customer_id) references customer [42001-240]
+2026-01-24 13:53:07.453442-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references [*]order"; expected "identifier"; SQL statement:
+alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references order [42001-240]
+2026-01-24 14:50:50.502225-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]order cascade "; expected "identifier"; SQL statement:
+drop table if exists order cascade  [42001-240]
+2026-01-24 14:50:50.536862-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]order (order_date timestamp(6) with time zone, customer_id uuid, id uuid not null, primary key (id))"; expected "identifier"; SQL statement:
+create table order (order_date timestamp(6) with time zone, customer_id uuid, id uuid not null, primary key (id)) [42001-240]
+2026-01-24 14:50:50.555852-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists [*]order add constraint FKos62y39230f9r77ga33f3yo1a foreign key (customer_id) references table_order"; expected "identifier"; SQL statement:
+alter table if exists order add constraint FKos62y39230f9r77ga33f3yo1a foreign key (customer_id) references table_order [42001-240]
+2026-01-24 14:50:50.588833-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references [*]order"; expected "identifier"; SQL statement:
+alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references order [42001-240]
+2026-01-28 16:52:17.663719-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]order cascade "; expected "identifier"; SQL statement:
+drop table if exists order cascade  [42001-240]
+2026-01-28 16:52:17.699850-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]order (order_date timestamp(6) with time zone, customer_id uuid, id uuid not null, primary key (id))"; expected "identifier"; SQL statement:
+create table order (order_date timestamp(6) with time zone, customer_id uuid, id uuid not null, primary key (id)) [42001-240]
+2026-01-28 16:52:17.711841-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists [*]order add constraint FKos62y39230f9r77ga33f3yo1a foreign key (customer_id) references table_order"; expected "identifier"; SQL statement:
+alter table if exists order add constraint FKos62y39230f9r77ga33f3yo1a foreign key (customer_id) references table_order [42001-240]
+2026-01-28 16:52:17.734282-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references [*]order"; expected "identifier"; SQL statement:
+alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references order [42001-240]
+2026-01-28 16:58:09.771545-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop table if exists [*]order cascade "; expected "identifier"; SQL statement:
+drop table if exists order cascade  [42001-240]
+2026-01-28 16:58:09.806286-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table [*]order (order_date timestamp(6) with time zone, customer_id uuid, id uuid not null, primary key (id))"; expected "identifier"; SQL statement:
+create table order (order_date timestamp(6) with time zone, customer_id uuid, id uuid not null, primary key (id)) [42001-240]
+2026-01-28 16:58:09.817259-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists [*]order add constraint FKnl45hbmc3wfypns48974qkclo foreign key (customer_id) references table_customer"; expected "identifier"; SQL statement:
+alter table if exists order add constraint FKnl45hbmc3wfypns48974qkclo foreign key (customer_id) references table_customer [42001-240]
+2026-01-28 16:58:09.837250-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references [*]order"; expected "identifier"; SQL statement:
+alter table if exists order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references order [42001-240]
+2026-01-29 08:26:10.084984-05:00 jdbc[362]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-240]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:217)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:134)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:752)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:731)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more

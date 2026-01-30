@@ -5,10 +5,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.AnyDiscriminatorImplicitValues;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table
+@Table(name = "TABLE_CUSTOMER")
 @Data
 @NoArgsConstructor
 public class Customer {
@@ -18,4 +19,6 @@ public class Customer {
     private String firstName;
     private String lastNAme;
     private String email;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
+    private List<Order> orders;
 }
